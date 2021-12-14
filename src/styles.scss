@@ -1,1 +1,8 @@
-/* You can add global styles to this file, and also import other style files */
+@import './styles/base.scss';
+@import './styles/bootstrap.min.css';
+@import './styles/font-awesome.min.css';
+@import './lib/slick/slick-theme.css';
+// @import "../node_modules/ngx-chips/core/styles/core/core";
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

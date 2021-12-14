@@ -1,0 +1,359 @@
+:root {
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+body {
+	line-height: 1;
+	font-family: 'Source Sans Pro', sans-serif;
+	overflow: hidden;
+	font-weight: 400;
+	background-color: #f2f2f2;
+}
+ol, ul {
+	list-style: none;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+}
+main {
+	float: left;
+	width: 100%;
+	padding: 60px 0;
+}
+.main-section {
+	float: left;
+	width: 100%;
+	margin-top: 20px;
+}
+.main-section-data {
+	float: left;
+	width: 100%;	
+}
+.main-left-sidebar {
+	float: left;
+	width: 100%;
+	// margin-top: 90px;
+}
+
+.widget {
+	float: left;
+	width: 100%;
+	background-color: #fff;
+	border-left: 1px solid #e4e4e4;
+	border-right: 1px solid #e4e4e4;
+	border-bottom: 1px solid #e4e4e4;
+	margin-bottom: 20px;
+	-webkit-box-shadow:  0px 2px #e4e4e4;
+	-moz-box-shadow:  0px 2px #e4e4e4;
+	-ms-box-shadow:  0px 2px #e4e4e4;
+	-o-box-shadow:  0px 2px #e4e4e4;
+	box-shadow: 0px 2px #e4e4e4;
+}
+
+
+/* ============== widget-portfolio ============== */
+
+.wd-heady {
+	float: left;
+	width: 100%;
+	padding: 20px 20px;
+	border-bottom: 1px solid #e5e5e5;
+}
+.wd-heady h3 {
+	color: #000000;
+	font-size: 18px;
+	font-weight: 600;
+	float: left;
+}
+.wd-heady img {
+	float: right;
+}
+.pf-gallery {
+	float: left;
+	width: 100%;
+	padding: 15px 15px;
+	margin-bottom: 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+	height:  calc(100vh - 120px);
+	flex: none;
+}
+.pf-gallery ul {
+	float: left;
+	width: 100%;
+}
+.pf-gallery ul li {
+	float: left;
+	width: 33.33%;
+	padding: 5px;
+	overflow: auto;
+}
+.pf-gallery ul li:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.pf-gallery img {
+	width: 100%;	
+    width: 100%;
+	height: 200px;
+	object-fit: cover;
+}
+
+.product-feed-tab {
+	float: left;
+	width: 100%;
+	display: none;
+}
+.product-feed-tab.current {
+	display: block;
+}
+
+/* =============== user-profile-ov ================ */
+
+
+.left_container {
+    float: left;
+    width: 100%;
+    background-color: #fff;
+    margin-bottom: 5px;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #e5e5e5;
+	text-align: center;
+	height: calc(100vh - 120px);
+}
+
+
+/* =============== filter-secs ============== */
+
+.filter-secs {
+	float: left;
+	width: 100%;
+	background-color: #fff;
+	box-shadow: 0px 2px #e4e4e4;
+    border: 1px solid #e5e5e5;
+}
+.filter-heading {
+	float: left;
+	width: 100%;
+	padding: 15px 20px;
+	border-bottom: 1px solid #e5e5e5;
+	margin-bottom: 15px;
+}
+.filter-heading h3 {
+	float: left;
+	color: #e44d3a;
+	font-size: 18px;
+	font-weight: 600;
+}
+.filter-heading a {
+	float: right;
+	color: #686868;
+	font-size: 14px;
+	margin-top: 4px;
+}
+.filter-ttl {
+	float: left;
+	width: 100%;
+	border-bottom: 1px solid  #e5e5e5;
+	padding: 0 0 16px 0;
+	margin-bottom: 10px;
+}
+.filter--tt2 {
+	margin-bottom: 0px !important;
+}
+.top--1 {
+	margin-top: 20px;	
+}
+.filter--tt2 .dropdown .dropdown-menu a {
+    float: none;
+    color: #666666 !important;
+	margin-bottom: 12px !important;
+}
+.filter--tt2 .dropdown .dropdown-menu a:hover {
+    color: #e44d3a !important;
+	background: none !important;
+}
+.filter--tt2 .dropdown .dropdown-menu a:focus {
+    color: #e44d3a !important;
+	background: none !important;
+}
+.filter--tt2  a {
+	float: left !important;
+	padding: 0 0 0 15px !important;
+	font-size: 16px !important;
+	color: #000000 !important;
+	font-weight: 500 !important;
+}
+.filter-ttl h3 {
+	float: left;
+	padding: 0;
+	font-size: 16px;
+	color: #000000;
+	font-weight: 400;
+}
+.filter-ttl a {
+	float: right;
+	font-size: 14px;
+	color: #666666;
+}
+.filter-ttl .dropdown a {
+	float: none;
+	color: #666666;
+}  
+.filter-dd {
+	float: left;
+	width: 100%;
+	margin-bottom: 15px;
+}
+.filter-dd div {
+	float: left;
+	width: 100%;
+	position: relative;
+}
+.filter-dd div input,
+.filter-dd div select {
+	width: 100%;
+	height: 30px;
+	background-color: #f2f2f2;
+	padding: 0 10px;
+	color: #b2b2b2;
+	font-size: 12px;
+	font-weight: 600;
+	border: 0;
+	border: 1px solid #e5e5e5;
+}
+
+
+.paddy{
+	padding:20px;
+	float: left;
+}
+
+
+
+.avail-checks {
+	float: left;
+	width: 100%;
+	margin-top: 7px;
+}
+.avail-checks li {
+	float: left;
+	width: 100%;
+	margin-bottom: 10px;
+}
+.avail-checks li:last-child {
+	margin-bottom: 0;
+}
+.avail-checks li input[type="radio"] {
+	display: none;
+}
+.avail-checks li label {
+	float: left;
+}
+.avail-checks li input[type="radio"] + label span {
+	display: inline-block;
+	width: 15px;
+	height: 15px;
+	position: relative;
+	margin-top: 3px;
+	border: 1px solid #d2d2d2;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+}
+.avail-checks li input[type="radio"] + label span:before {
+	content: '';
+	opacity: 0;
+	visibility: hidden;
+	position: absolute;
+	width: 7px;
+	height: 7px;
+	-webkit-border-radius: 100px;
+	-moz-border-radius: 100px;
+	-ms-border-radius: 100px;
+	-o-border-radius: 100px;
+	border-radius: 100px;
+	background-color: #e44d3a;
+	top: 3px;
+	left: 3px;
+}
+.avail-checks li input[type="radio"]:checked + label span:before {
+	opacity: 1;
+	visibility: visible;
+}
+.avail-checks li small {
+	color: #909090;
+	font-size: 14px;
+	padding-left: 10px;
+	font-weight: 500;
+}
+
+.ddp-tp i {
+	color: #666666;
+    position: absolute;
+    top: 9px;
+    right: 15px;
+    font-size: 14px;
+}
+.rg-limit {
+	float: left;
+	width: 100%;
+	margin-top: 16px;
+}
+.rg-limit h4 {
+	color: #686868;
+	font-size: 15px;	
+	font-weight: 600;
+	float: left;
+}
+.rg-limit h4:last-child {
+	float: right;
+}
