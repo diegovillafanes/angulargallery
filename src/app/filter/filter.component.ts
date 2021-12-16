@@ -1,6 +1,6 @@
 import { SetFilterAction } from './../ngxs/actions/filter.action';
 import { CameraModel } from '@app/_models/camera.filter.model';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Type } from '@angular/core';
 import { FormBuilder, FormControl, FormGroup } from '@angular/forms';
 import {MatChipInputEvent} from '@angular/material/chips';
 import { Select, Store } from '@ngxs/store';
@@ -22,7 +22,7 @@ export class FilterComponent implements OnInit {
   filterForm: FormGroup
   fruits: Fruit[] = [{name: 'Lemon'}, {name: 'Lime'}, {name: 'Apple'}];
   filteredItem = new FilterModel();
-
+  camerasFiltered: CameraModel[];
   public camerasFilter: CameraModel[] = [
     {
       key: 'FHAZ',
@@ -93,30 +93,31 @@ export class FilterComponent implements OnInit {
 
   ngOnInit() {
     this.filterForm = new FormBuilder().group({
-      rover: new FormControl("curiosity")
-    });
+      rover: new FormControl("curiosity"),
+      camera: new FormControl("")
 
+    });
     this.initialSubscriptions();
+    this.filterCamerasByRover("curiosity");
 
   }
 
   initialSubscriptions(): void {
     this.filterForm.valueChanges
     .subscribe(val =>{
-
       this.filteredItem = {...this.filteredItem,...this.filterForm.value}
-
-      console.log("FILTER COMPONENET this.filteredItem",this.filteredItem);
       this.store.dispatch(new SetFilterAction(this.filteredItem));
     });
   }
 
-  public onSelect(item) {
-    console.log('tag selected: value is ' + item);
+  public onSelect(evt) : void {
+    this.filterCamerasByRover(evt.target.value);
   }
 
-  public filterChanged(){
-
+  private filterCamerasByRover(roverKey: string): void {
+    
+    this.camerasFiltered = this.camerasFilter.filter(x => x[roverKey] === true)
+    this.filterForm.patchValue({"camera": ""});
 
   }
 

@@ -1,5 +1,5 @@
 export const environment = {
   production: false,
   url : 'https://api.nasa.gov/mars-photos/api/v1/rovers/',
-  api_key: 'OXhhgVKehOwZtAamH2AviBNohT4DJ1yrSEiahs9n'
+  api_key: 'jpEuZbISlN1Qv3kYZOC2jlPKtpGyyw7fV4jTb0O2'
 };
