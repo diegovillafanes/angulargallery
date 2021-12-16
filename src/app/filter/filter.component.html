@@ -21,21 +21,21 @@
                 </div>
                 <ul class="avail-checks">
                     <li>
-                        <input type="radio" name="rover" value="curiosity" formControlName="rover" id="curiosity">
+                        <input type="radio" name="rover" value="curiosity" formControlName="rover" id="curiosity" (change)="onSelect($event)" >
                         <label for="curiosity">
                             <span></span>
                         </label>
                         <small>Curiosity</small>
                     </li>
                     <li>
-                        <input type="radio" name="rover" value="opportunity" formControlName="rover" id="opportunity">
+                        <input type="radio" name="rover" value="opportunity" formControlName="rover" id="opportunity" (change)="onSelect($event)" >
                         <label for="opportunity">
                             <span></span>
                         </label>
                         <small>Opportunity</small>
                     </li>
                     <li>
-                        <input type="radio" name="rover" value="spirit" formControlName="rover" id="spirit">
+                        <input type="radio" name="rover" value="spirit" formControlName="rover" id="spirit" (change)="onSelect($event)" >
                         <label for="spirit">
                             <span></span>
                         </label>
@@ -48,26 +48,12 @@
                     <h3>Cameras</h3>
                 </div>
                 <div class="ddp-tp">
-                    <select>
-                        <option>Select a Camera</option>
-                        <option *ngFor='let cam of camerasFilter'>{{cam.camera}}</option>
+                    <select formControlName="camera"  >
+                        <option value="">Select a Camera</option>
+                        <option *ngFor='let cam of camerasFiltered' [value]="cam.key">{{cam.camera}}</option>
                     </select>
                     <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
                 </div>
-            </div>
-            <div class="filter-dd">
-                <div class="filter-ttl">
-                    <h3>Pay Rate / Hr ($)</h3>
-                    <a href="#" title="">Clear</a>
-                </div>
-                <div class="rg-slider">
-                    <input class="rn-slider slider-input" type="hidden" value="5,50" />
-                </div>
-                <div class="rg-limit">
-                    <h4>1</h4>
-                    <h4>100+</h4>
-                </div>
-                <!--rg-limit end-->
             </div>
             <div class="filter-dd">
                 <div class="filter-ttl">

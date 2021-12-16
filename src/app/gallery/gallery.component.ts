@@ -37,6 +37,7 @@ export class GalleryComponent implements OnInit {
         if (this.filter.rover != val.rover) {
           this.filter = val;
           this.page = 1;
+          this.list.length = 0;
           this.getPhotos();
         }
         else {
@@ -47,11 +48,11 @@ export class GalleryComponent implements OnInit {
   }
 
   applyFilter(filter: FilterModel): void {
-    const compare = r => l => (typeof l === "object" ? contains(r)(l) : l === r);
-    const contains = r => l =>
-      Object.keys(r).every(k => l.hasOwnProperty(k) && compare(r[k])(l[k]));
-
-    this.listFiltered = this.list.filter(contains(filter))
+    const compare = r => l => (typeof l === "object" ? contains(r)(l) : ( r.length === 0 || l === r));
+    const contains = r => l =>Object.keys(r).every(k => l.hasOwnProperty(k) && compare(r[k])(l[k]));
+    this.listFiltered = this.list.filter(contains(filter));
+    console.log("this.list",this.list);
+    console.log("this.listFiltered",this.listFiltered);
   }
 
   getPhotos(): void {
